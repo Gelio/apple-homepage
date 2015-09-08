@@ -39,6 +39,7 @@ body {
   }
 }
 
+.nav-list-item,
 .nav-list-item:link,
 .nav-list-item:visited {
   color: rgba(255, 255, 255, 0.95);
@@ -58,6 +59,18 @@ body {
   font-size: 1.2em;
 }
 
+.menu-search-box {
+  background: none;
+  border: 0;
+  color: rgba(255, 255, 255, 0.95);
+  margin-left: 5%;
+  outline: 0;
+  width: 80%;
+}
+.menu-search-box:focus {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .toggleable-menu {
   display: none;
 }
@@ -67,7 +80,7 @@ body {
   padding: 10px 0;
 }
 .toggleable-menu ul li {
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.7);
   margin-top: 10px;
 }
 .toggleable-menu ul li:first-of-type {
@@ -94,25 +107,38 @@ body {
   }
 }
 
-.photos-album,
-.album-photo {
+.photos-album {
   height: 100%;
-  width: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  -webkit-transition: left 500ms ease-in-out;
+          transition: left 500ms ease-in-out;
+  width: 500vw;
 }
 
 .album-photo {
   background-position: center;
   background-size: cover;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  float: left;
   font-weight: 500;
+  height: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  width: 100vw;
 }
 .album-photo:link, .album-photo:hover, .album-photo:visited {
   text-decoration: none;
@@ -143,4 +169,47 @@ body {
 
 .album-photo-description {
   font-weight: 300;
+}
+
+.album-control-dots {
+  bottom: 0;
+  display: inline-block;
+  height: 8%;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 20%;
+}
+.album-control-dots .fa-circle,
+.album-control-dots .fa-circle-o {
+  margin-right: 5%;
+}
+.album-control-dots .fa-circle:last-of-type,
+.album-control-dots .fa-circle-o:last-of-type {
+  margin-right: 0;
+}
+.album-control-dots .fa-circle {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.album-control-dots .fa-circle-o {
+  color: #6ea0c6;
+}
+
+.album-photo-link {
+  margin-right: 2%;
+}
+.album-photo-link:last-of-type {
+  margin-right: 0;
+}
+.album-photo-link:link, .album-photo-link:hover, .album-photo-link:visited {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2em;
+  font-weight: 300;
+  text-decoration: none;
+}
+.album-photo-link:hover > span {
+  text-decoration: underline;
 }

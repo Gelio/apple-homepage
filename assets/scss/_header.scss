@@ -26,6 +26,7 @@
   }
 }
 
+.nav-list-item,
 .nav-list-item:link,
 .nav-list-item:visited {
   color: $regular-white;
@@ -45,6 +46,19 @@
   font-size: 1.2em;
 }
 
+.menu-search-box {
+  background: none;
+  border: 0;
+  color: $regular-white;
+  margin-left: 5%;
+  outline: 0;
+  width: 80%;
+
+  &:focus {
+    color: $highlighted-white;
+  }
+}
+
 
 .toggleable-menu {
   display: none;
@@ -55,7 +69,7 @@
     padding: 10px 0;
 
     li {
-      border-bottom: solid 1px #fff;
+      border-bottom: solid 1px $highlighted-white;
       margin-top: 10px;
     }
 
