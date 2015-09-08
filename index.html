@@ -2,9 +2,66 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apple</title>
+
+
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/build/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/build/style.min.css">
 </head>
 <body>
+<header class="main-header container-fluid">
+    <nav class="container">
+        <div class="row">
+            <ul class="nav-list clearfix hidden-md-up">
+                <!--Responsive-->
+                <li class="text-left"><a href="#" class="nav-list-item toggle-menu-button"><i class="fa fa-bars"></i></a></li>
+                <li class="text-center"><a href="#" class="nav-list-item"><i class="fa fa-apple"></i></a></li>
+                <li class="text-right"><a href="#" class="nav-list-item"><i class="fa fa-lock"></i></a></li>
+            </ul>
 
+            <ul class="nav-list clearfix hidden-sm-down">
+                <li><a href="#" class="nav-list-item"><i class="fa fa-apple"></i></a></li>
+                <li><a href="#" class="nav-list-item">Mac</a></li>
+                <li><a href="#" class="nav-list-item">iPad</a></li>
+                <li><a href="#" class="nav-list-item">iPhone</a></li>
+                <li><a href="#" class="nav-list-item">Watch</a></li>
+                <li><a href="#" class="nav-list-item">Music</a></li>
+                <li><a href="#" class="nav-list-item">Support</a></li>
+                <li><a href="#" class="nav-list-item"><i class="fa fa-search"></i></a></li>
+                <li><a href="#" class="nav-list-item"><i class="fa fa-lock"></i></a></li>
+            </ul>
+        </div>
+        <section class="toggleable-menu">
+            <ul>
+                <li><a href="#" class="nav-list-item">Mac</a></li>
+                <li><a href="#" class="nav-list-item">iPad</a></li>
+                <li><a href="#" class="nav-list-item">iPhone</a></li>
+                <li><a href="#" class="nav-list-item">Watch</a></li>
+                <li><a href="#" class="nav-list-item">Music</a></li>
+                <li><a href="#" class="nav-list-item">Support</a></li>
+                <li><a href="#" class="nav-list-item"><i class="fa fa-search"></i></a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+
+<section class="main-photos container-fluid">
+    <div class="photos-album">
+        <a href="#" class="album-photo vertical-align-center color-inverted" style="background-image: url('http://images.apple.com/v/home/bx/images/music_hero_medium.jpg')">
+            <hgroup>
+                <h1 class="album-photo-header display-3"><i class="fa fa-apple"></i>&nbsp;Music</h1>
+                <h2 class="album-photo-description">Free, three-month trial now available.<sup class="asterisk"><i class="fa fa-asterisk"></i></sup></h2>
+            </hgroup>
+        </a>
+    </div>
+</section>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="assets/js/toggleable-menu.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

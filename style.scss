@@ -1,0 +1,12 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/global-elements';
+
+body {
+  color: $regular-black;
+  //font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+@import 'assets/scss/header';
+@import 'assets/scss/main-photos';

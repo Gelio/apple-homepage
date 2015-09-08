@@ -1,0 +1,70 @@
+.main-header {
+  background-color: $regular-black;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    width: 33.33333%;
+
+    @media (min-width: 48em) {
+      text-align: center;
+      width: 11.1%;
+    }
+  }
+}
+
+.nav-list-item:link,
+.nav-list-item:visited {
+  color: $regular-white;
+  text-decoration: none;
+}
+
+.nav-list-item {
+  transition: color .2s linear;
+
+  &:hover {
+    color: $highlighted-white;
+    text-decoration: none;
+  }
+}
+
+.fa-apple {
+  font-size: 1.2em;
+}
+
+
+.toggleable-menu {
+  display: none;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+
+    li {
+      border-bottom: solid 1px #fff;
+      margin-top: 10px;
+    }
+
+    li:first-of-type {
+      margin-top: 0;
+    }
+
+    li:last-of-type {
+      border-bottom: 0;
+    }
+  }
+}

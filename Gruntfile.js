@@ -12,6 +12,15 @@ module.exports = function(grunt) {
             }
         },
 
+        scsslint: {
+            dist: {
+                src: ['style.scss', 'assets/scss/*.scss']
+            },
+            options: {
+                colorizeOutput: true
+            }
+        },
+
         autoprefixer: {
             dist: {
                 files: {
@@ -21,7 +30,7 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-            all: ['Gruntfile.js', 'main.js']
+            all: ['Gruntfile.js', 'main.js', 'assets/js/*.js']
         },
 
         cssmin: {
@@ -36,14 +45,14 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: ['*.scss', 'assets/scss/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin'],
+                tasks: ['scsslint', 'sass', 'autoprefixer', 'cssmin'],
                 options: {
                     spawn: false
                 }
             },
 
             javascript: {
-                files: ['Gruntfile.js', 'main.js'],
+                files: ['Gruntfile.js', 'main.js', 'assets/js/*.js'],
                 tasks: ['jshint'],
                 options: {
                     spawn: false
@@ -57,8 +66,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-scss-lint');
 
 
-    grunt.registerTask('compile-scss', ['sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('compile-scss', ['scsslint', 'sass', 'autoprefixer', 'cssmin']);
     grunt.registerTask('default', ['compile-scss', 'jshint']);
 };

@@ -1,0 +1,70 @@
+.main-photos {
+  height: 400px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  @media (min-width: 62em) {
+    height: 600px;
+  }
+
+  @media (min-width: 75em) {
+    height: 800px;
+  }
+}
+
+.photos-album,
+.album-photo {
+  height: 100%;
+  width: 100%;
+}
+
+.album-photo {
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+
+  font-weight: 500;
+  justify-content: center;
+
+  text-align: center;
+
+  &:link,
+  &:hover,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &.vertical-align-top {
+    // TODO: figure out how to set it correctly
+    //align-items: ;
+  }
+
+  &.vertical-align-center {
+    align-items: center;
+  }
+
+  &.color-default {
+    color: $regular-black;
+  }
+
+  &.color-inverted {
+    color: $regular-white;
+  }
+}
+
+.album-photo-header {
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media (min-width: 62em) {
+    font-size: 5.5rem;
+  }
+}
+
+.album-photo-description {
+  font-weight: 300;
+}
+
