@@ -5,3 +5,27 @@
     font-size: .3em;
   }
 }
+
+.text-semi-transparent-regular {
+  color: transparentize($regular-black, .25);
+}
+
+.blue-link {
+  &:link,
+  &:hover,
+  &:visited {
+    color: #08c;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+
+.regular-link {
+  &:link,
+  &:hover,
+  &:visited {
+    color: $regular-black;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
