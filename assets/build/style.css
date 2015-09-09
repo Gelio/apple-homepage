@@ -17,7 +17,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav-list {
@@ -96,9 +96,14 @@ body {
   padding: 0;
   position: relative;
 }
-@media (min-width: 62em) {
+@media (min-width: 48em) {
   .main-photos {
     height: 600px;
+  }
+}
+@media (min-width: 62em) {
+  .main-photos {
+    height: 700px;
   }
 }
 @media (min-width: 75em) {
@@ -114,7 +119,7 @@ body {
   top: 0;
   -webkit-transition: left 500ms ease-in-out;
           transition: left 500ms ease-in-out;
-  width: 500vw;
+  width: 800vw;
 }
 
 .album-photo {
@@ -143,6 +148,16 @@ body {
 .album-photo:link, .album-photo:hover, .album-photo:visited {
   text-decoration: none;
 }
+.album-photo.vertical-align-top {
+  position: relative;
+}
+.album-photo.vertical-align-top hgroup {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 1;
+}
 .album-photo.vertical-align-center {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -155,10 +170,22 @@ body {
 .album-photo.color-inverted {
   color: rgba(255, 255, 255, 0.95);
 }
+.album-photo.background-no-cover {
+  background-position: center 75%;
+  background-repeat: no-repeat;
+  background-size: 75% auto;
+}
+@media (min-width: 48em) {
+  .album-photo.background-no-cover {
+    background-position: center;
+    background-size: auto;
+  }
+}
 
 .album-photo-header {
   font-size: 4rem;
   font-weight: 500;
+  margin-top: .5rem;
   text-transform: uppercase;
 }
 @media (min-width: 62em) {
@@ -180,11 +207,11 @@ body {
   position: absolute;
   right: 0;
   text-align: center;
-  width: 20%;
+  width: 50%;
 }
 .album-control-dots .fa-circle,
 .album-control-dots .fa-circle-o {
-  margin-right: 5%;
+  margin-right: 2%;
 }
 .album-control-dots .fa-circle:last-of-type,
 .album-control-dots .fa-circle-o:last-of-type {

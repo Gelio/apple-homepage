@@ -4,8 +4,12 @@
   padding: 0;
   position: relative;
 
-  @media (min-width: 62em) {
+  @media (min-width: 48em) {
     height: 600px;
+  }
+
+  @media (min-width: 62em) {
+    height: 700px;
   }
 
   @media (min-width: 75em) {
@@ -19,7 +23,7 @@
   position: relative;
   top: 0;
   transition: left 500ms ease-in-out;
-  width: 500vw;
+  width: 800vw;
 }
 
 .album-photo {
@@ -50,6 +54,15 @@
   &.vertical-align-top {
     // TODO: figure out how to set it correctly
     //align-items: ;
+    position: relative;
+
+    hgroup {
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 50px;
+      z-index: 1;
+    }
   }
 
   &.vertical-align-center {
@@ -63,11 +76,23 @@
   &.color-inverted {
     color: $regular-white;
   }
+
+  &.background-no-cover {
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    background-size: 75% auto;
+
+    @media (min-width: 48em) {
+      background-position: center;
+      background-size: auto;
+    }
+  }
 }
 
 .album-photo-header {
   font-size: 4rem;
   font-weight: 500;
+  margin-top: .5rem;
   text-transform: uppercase;
 
   @media (min-width: 62em) {
@@ -89,11 +114,11 @@
   right: 0;
 
   text-align: center;
-  width: 20%;
+  width: 50%;
 
   .fa-circle,
   .fa-circle-o {
-    margin-right: 5%;
+    margin-right: 2%;
 
     &:last-of-type {
       margin-right: 0;
