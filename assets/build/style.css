@@ -91,6 +91,7 @@ body {
 }
 
 .main-photos {
+  background-color: #f2f2f2;
   height: 400px;
   overflow: hidden;
   padding: 0;
@@ -243,4 +244,19 @@ body {
 }
 .album-photo-link:hover > span {
   text-decoration: underline;
+}
+
+.news-section {
+  margin-top: 2px;
+}
+
+.news-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 640px 200px;
+}
+.news-image:after {
+  content: '';
+  display: block;
+  padding-bottom: 200px;
 }

@@ -1,0 +1,15 @@
+.news-section {
+  margin-top: 2px;
+}
+
+.news-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 640px 200px;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 200px;
+  }
+}

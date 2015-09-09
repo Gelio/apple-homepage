@@ -6,11 +6,6 @@ This is [a task](http://www.theodinproject.com/html5-and-css3/building-with-back
 
 
 ## TODO ##
-* download Grunt plugins
-* set up Gruntfile
-    * SASS
-    * watch
 * layout
-* carousel
 * push final version to GitHub
 * add my project to TheOdinProject's page
