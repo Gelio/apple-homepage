@@ -6,6 +6,4 @@ This is [a task](http://www.theodinproject.com/html5-and-css3/building-with-back
 
 
 ## TODO ##
-* make footer's site map responsive (sliding uls)
-* push final version to GitHub
-* add my project to TheOdinProject's page
+done

@@ -41,11 +41,15 @@ module.exports = function(grunt) {
             }
         },
 
+        clean: {
+            scss: ['assets/build/style.css', 'assets/build/style.min.css']
+        },
+
 
         watch: {
             css: {
                 files: ['*.scss', 'assets/scss/*.scss'],
-                tasks: ['scsslint', 'sass', 'autoprefixer', 'cssmin'],
+                tasks: ['compile-scss'],
                 options: {
                     spawn: false
                 }
@@ -67,8 +71,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-scss-lint');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
 
-    grunt.registerTask('compile-scss', ['scsslint', 'sass', 'autoprefixer', 'cssmin']);
-    grunt.registerTask('default', ['compile-scss', 'jshint']);
+    grunt.registerTask('compile-scss', ['clean:scss', 'scsslint', 'sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['compile-scss', /*'clean:js',*/ 'jshint']);
 };

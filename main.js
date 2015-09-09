@@ -16,12 +16,20 @@ $(document).ready(function() {
 
     $(window).on("resize", checkWidthForMenu);
 
+
+    // Hero section redirection
     $(".album-photo").on("click", redirectToHeroPage);
 
+    // Calculating font sizes
     fontSize = parseFloat($("body").css("font-size"));
     breakpointEms.forEach(function(value) {
         breakpointWidths.push(fontSize*value);
     });
 
+    // Hero section
     initHeroSectionControls();
+
+    // Footer's site map menu
+    initSiteMapMenu();
+    $(window).on("resize", checkWidthForSiteMap);
 });

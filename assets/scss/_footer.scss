@@ -1,5 +1,6 @@
 .page-footer {
   background-color: $footer-bg-color;
+  padding-top: 1em;
 
   .text-smaller {
     font-size: .8rem;
@@ -24,6 +25,7 @@
   }
 
   ul {
+    display: block;
     list-style-type: none;
     //padding: 0 0 0 1em;
     padding: 0;
@@ -41,5 +43,35 @@
     display: inline-block;
     margin-left: .5em;
     padding-right: .5em;
+  }
+}
+
+// Mobile view
+@media (max-width: 47.9em) {
+  .page-map > .col-1 {
+    float: none;
+    text-align: center;
+    width: 100%;
+
+
+    h5 {
+      border-top: solid 1px $regular-black;
+      margin: .5rem 0;
+      padding-top: .5rem;
+
+      &.no-border-top {
+        border-top: 0;
+      }
+
+      &:after {
+        content: '+';
+        display: inline;
+        margin-left: .5rem;
+      }
+    }
+
+//    ul {
+//      display: none;
+//    }
   }
 }
