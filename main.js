@@ -4,6 +4,9 @@ var menuList = null,
 var breakpointEms = [34, 48, 62, 75],
     breakpointWidths = [];
 
+var slidesChangeInterval = 5000,
+    slidesChangeIntervalAfterClick = 10000;
+
 $(document).ready(function() {
     // Toggleable menu
     $(".toggle-menu-button").on("click", toggleableMenu);
