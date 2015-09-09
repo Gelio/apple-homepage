@@ -106,11 +106,6 @@ body {
     height: 700px;
   }
 }
-@media (min-width: 75em) {
-  .main-photos {
-    height: 800px;
-  }
-}
 
 .photos-album {
   height: 100%;
@@ -181,16 +176,25 @@ body {
     background-size: auto;
   }
 }
+.album-photo.background-vertical {
+  background-size: auto 50%;
+}
 
 .album-photo-header {
   font-size: 4rem;
   font-weight: 500;
   margin-top: .5rem;
-  text-transform: uppercase;
+}
+.album-photo-header.text-smaller {
+  font-size: 3rem;
+  font-weight: 300;
 }
 @media (min-width: 62em) {
   .album-photo-header {
     font-size: 5.5rem;
+  }
+  .album-photo-header.text-smaller {
+    font-size: 4rem;
   }
 }
 

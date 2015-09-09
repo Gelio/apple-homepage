@@ -12,9 +12,9 @@
     height: 700px;
   }
 
-  @media (min-width: 75em) {
-    height: 800px;
-  }
+//  @media (min-width: 75em) {
+//    height: 800px;
+//  }
 }
 
 .photos-album {
@@ -87,16 +87,30 @@
       background-size: auto;
     }
   }
+
+  &.background-vertical {
+    //@media (max-width: 47.9em) {
+    background-size: auto 50%;
+    //}
+  }
 }
 
 .album-photo-header {
   font-size: 4rem;
   font-weight: 500;
   margin-top: .5rem;
-  text-transform: uppercase;
+
+  &.text-smaller {
+    font-size: 3rem;
+    font-weight: 300;
+  }
 
   @media (min-width: 62em) {
     font-size: 5.5rem;
+
+    &.text-smaller {
+      font-size: 4rem;
+    }
   }
 }
 
