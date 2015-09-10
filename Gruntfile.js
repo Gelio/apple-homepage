@@ -41,8 +41,20 @@ module.exports = function(grunt) {
             }
         },
 
+        uglify: {
+            options: {
+
+            },
+            dist: {
+                files: {
+                    'assets/build/main.min.js': ['assets/build/jquery.min.js', 'assets/js/*.js', 'main.js']
+                }
+            }
+        },
+
         clean: {
-            scss: ['assets/build/style.css', 'assets/build/style.min.css']
+            scss: ['assets/build/style.css', 'assets/build/style.min.css'],
+            js: ['assets/build/main.min.js']
         },
 
 
@@ -57,7 +69,7 @@ module.exports = function(grunt) {
 
             javascript: {
                 files: ['Gruntfile.js', 'main.js', 'assets/js/*.js'],
-                tasks: ['jshint'],
+                tasks: ['compile-js'],
                 options: {
                     spawn: false
                 }
@@ -72,8 +84,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
-    grunt.registerTask('compile-scss', ['clean:scss', 'scsslint', 'sass', 'autoprefixer', 'cssmin']);
-    grunt.registerTask('default', ['compile-scss', /*'clean:js',*/ 'jshint']);
+    grunt.registerTask('compile-scss', ['scsslint', 'clean:scss', 'sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('compile-js', 'jshint', 'clean:js', 'uglify');
+    grunt.registerTask('default', ['compile-scss', 'compile-js']);
 };
