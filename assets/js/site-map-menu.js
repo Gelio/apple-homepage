@@ -33,6 +33,7 @@ function checkWidthForSiteMap() {
             isMenuOpen[index] = $(this).css("display") === 'block';
         });
 
+
         menus.show();
     }
     else if(currentWidth < breakpointWidths[1] && previousWidth >= breakpointWidths[1]) {
